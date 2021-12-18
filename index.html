@@ -216,7 +216,7 @@
 
 <div class="container carousel-category-container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-xl-6">
+        <div class="col-12 col-md-8 col-xl-7">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <a href="#" class="carousel-item active" data-bs-interval="10000">
@@ -367,7 +367,7 @@
                     </div>
                     <!-- COUNTER-->
                     <div class="product-counter-container">
-                        <div class="counter-wrapper" data-countdown="countDown-1">
+                        <div class="counter-wrapper">
                             <span class="hours-box">1</span>:<span class="minutes-box">20</span>:<span
                                 class="seconds-box">4</span>
                         </div>
@@ -397,7 +397,7 @@
                     </div>
                     <!-- COUNTER-->
                     <div class="product-counter-container">
-                        <div class="counter-wrapper" data-countdown="countDown-2">
+                        <div class="counter-wrapper">
                             <span class="hours-box">1</span>:<span class="minutes-box">60</span>:<span
                                 class="seconds-box">4</span>
                         </div>
@@ -426,7 +426,7 @@
                     </div>
                     <!-- COUNTER-->
                     <div class="product-counter-container">
-                        <div class="counter-wrapper" data-countdown="countDown-3">
+                        <div class="counter-wrapper">
                             <span class="hours-box">1</span>:<span class="minutes-box">0</span>:<span
                                 class="seconds-box">14</span>
                         </div>
@@ -455,7 +455,7 @@
                     </div>
                     <!-- COUNTER-->
                     <div class="product-counter-container">
-                        <div class="counter-wrapper" data-countdown="countDown-4">
+                        <div class="counter-wrapper">
                             <span class="hours-box">0</span>:<span class="minutes-box">2</span>:<span
                                 class="seconds-box">59</span>
                         </div>
@@ -524,9 +524,9 @@
                 <div class="footer-col-item footer-info-container text-center text-sm-start">
                     <h4 class="footer-title">پشتیبانی فروشگاه گلبرگ</h4>
                     <hr class="mb-4">
-                    <a href="tel:09023777849" class="footer-info-box">
+                    <a href="tel:09158210633" class="footer-info-box">
                         <i class="fa fa-phone"></i>
-                        <span>09023777849</span>
+                        <span>09158210633</span>
                     </a>
 
                     <a href="mailto:Example@gmail.com" class="footer-info-box">
@@ -536,7 +536,7 @@
 
                     <div class="footer-info-box align-items-start">
                         <i class="fa fa-map-marker"></i>
-                        <div><span>آدرس: </span><span>تهران - میدان انقلاب - خیابان فجر - کوچه صبا - پلاک ۱۲ - فروشگاه گلبرگ</span>
+                        <div><span>آدرس: </span><span>خوزستان رامهرمز - خیابان نواب صفوی - پاساژ نیکزاد</span>
                         </div>
                     </div>
                     <hr>
@@ -545,8 +545,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="footer-social-item col-3">
-                                    <a href="https://api.whatsapp.com/send?phone=09023777849" target="_blank"
-                                       class="footer-social-img">
+                                    <a href="https://wa.me/09158210633" class="footer-social-img">
                                         <img src="./images/whatsapp-icon.png" alt="whatsApp">
                                     </a>
                                 </div>
@@ -558,7 +557,7 @@
                                 </div>
 
                                 <div class="footer-social-item col-3">
-                                    <a href="https://instagram.com/goolbargshop" target="_blank"
+                                    <a href="https://instagram.com/goolbargshop1" target="_blank"
                                        class="footer-social-img">
                                         <img src="./images/instagram-icon.png" alt="instagram">
                                     </a>
@@ -615,19 +614,15 @@
 <script>
 
     // CREATE COUNTER TIMER FOR DISCOUNT PRODUCTS
-    const counterParents = document.querySelectorAll('[data-countdown]');
+    const counterParents = document.querySelectorAll('.counter-wrapper');
 
-
-    for (let i = 1; i < counterParents.length + 1; i++) {
-        const parent = document.querySelector(`[data-countdown = countDown-${i}]`);
-
+    counterParents.forEach(parent => {
         const hourHand = parent.children[0];
         const minuteHand = parent.children[1];
         const secondHand = parent.children[2];
 
         setCountDown(hourHand, minuteHand, secondHand);
-    }
-
+    });
 
     function setCountDown(hourHand, minuteHand, secondHand) {
         const counterInterval = setInterval(() => {
