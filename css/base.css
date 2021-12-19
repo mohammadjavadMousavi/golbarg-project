@@ -29,6 +29,11 @@ body {
     direction: rtl;
 }
 
+::selection {
+    background: var(--secondary-color);
+    color: var(--text-dark);
+}
+
 @font-face {
     font-family: font-sahel;
     src: url('./fonts/Sahel.ttf');
